@@ -19,7 +19,7 @@ const EditFamilyMembersScreen = ({ route, navigation }) => {
     useEffect(() => {
         const fetchFamilyMembers = async () => {
             try {
-                const response = await fetch(`http://192.168.51.89:5000/familyMembers/${userId}`);
+                const response = await fetch(`http://localhost:5000/familyMembers/${userId}`);
                 const data = await response.json();
                 setFamilyMembers(data);
             } catch (error) {
@@ -45,7 +45,7 @@ const EditFamilyMembersScreen = ({ route, navigation }) => {
         const newMember = { resident_id: userId, name, age: parseInt(age), relationship };
     
         try {
-            const response = await fetch('http://192.168.51.89:5000/addFamilyMember', {
+            const response = await fetch('http://localhost:5000/addFamilyMember', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(newMember),
@@ -78,7 +78,7 @@ const EditFamilyMembersScreen = ({ route, navigation }) => {
                     style: 'destructive', 
                     onPress: async () => {
                         try {
-                            await fetch(`http://192.168.51.89:5000/deleteFamilyMember/${id}`, { method: 'DELETE' });
+                            await fetch(`http://localhost:5000/deleteFamilyMember/${id}`, { method: 'DELETE' });
                             setFamilyMembers(familyMembers.filter(member => member.member_id !== id));
                         } catch (error) {
                             console.error(error);

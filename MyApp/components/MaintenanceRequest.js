@@ -37,7 +37,7 @@ const MaintenanceRequest = ({ route }) => {
         });
 
         try {
-            const response = await fetch('http://192.168.51.89:5000/maintenance', {
+            const response = await fetch('http://192.168.1.37:5000/maintenance', {
                 method: 'POST',
                 body: formData,
                 headers: {

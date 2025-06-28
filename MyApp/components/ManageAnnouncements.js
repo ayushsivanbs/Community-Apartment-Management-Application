@@ -4,7 +4,7 @@ import {
     Alert, ActivityIndicator, StyleSheet 
 } from 'react-native';
 
-const API_URL = 'http://192.168.51.89:5000/announcements';
+const API_URL = 'http://localhost:5000/announcements';
 
 const ManageAnnouncements = () => {
     const [announcements, setAnnouncements] = useState([]);

@@ -18,8 +18,8 @@ const EditRentalAgreementScreen = ({ route }) => {
         const fetchData = async () => {
             try {
                 const [agreementResponse, residentResponse] = await Promise.all([
-                    fetch('http://192.168.51.89:5000/rental-agreements/${userId}'),
-                    fetch('http://192.168.51.89:5000/residents/${userId}')
+                    fetch('http://localhost:5000/rental-agreements/${userId}'),
+                    fetch('http://localhost:5000/residents/${userId}')
                 ]);
                 
                 if (agreementResponse.ok) {
@@ -48,7 +48,7 @@ const EditRentalAgreementScreen = ({ route }) => {
         if (!agreement) return;
 
         try {
-            const response = await fetch('http://192.168.51.89:5000/rental-agreements/${agreement.id}', {
+            const response = await fetch('http://localhost:5000/rental-agreements/${agreement.id}', {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(agreement)

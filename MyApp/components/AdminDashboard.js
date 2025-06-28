@@ -16,7 +16,7 @@ const AdminDashboard = () => {
     useEffect(() => {
         const fetchAnnouncements = async () => {
             try {
-                const response = await fetch(`http://192.168.51.89:5000/announcements?timestamp=${new Date().getTime()}`);
+                const response = await fetch(`http://localhost:5000/announcements?timestamp=${new Date().getTime()}`);
                 if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
                 const data = await response.json();
                 setAnnouncements([...data]);
@@ -29,7 +29,7 @@ const AdminDashboard = () => {
 
         const fetchMaintenanceRequests = async () => {
             try {
-                const response = await fetch('http://192.168.51.89:5000/maintenance-requests');
+                const response = await fetch('http://localhost:5000/maintenance-requests');
                 if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
                 
                 const data = await response.json();
@@ -76,8 +76,8 @@ const AdminDashboard = () => {
     };
 
     const payments = [
-        { id: '1', resident: 'John Doe', amount: '₹2500', status: 'Paid' },
-        { id: '2', resident: 'Jane Smith', amount: '₹500', status: 'Pending' },
+        { id: '1', resident: 'Madhav', amount: '₹2500', status: 'Paid' },
+        { id: '2', resident: 'Laya', amount: '₹500', status: 'Pending' },
     ];
 
     const handleQuickAction = () => {

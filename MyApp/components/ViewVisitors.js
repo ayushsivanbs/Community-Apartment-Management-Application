@@ -5,9 +5,8 @@ import { Card, Avatar } from 'react-native-paper';
 const ViewVisitors = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [visitors, setVisitors] = useState([
-        { id: '1', name: 'John Doe', purpose: 'Meeting', entryTime: '10:30 AM' },
-        { id: '2', name: 'Alice Smith', purpose: 'Delivery', entryTime: '11:15 AM' },
-        { id: '3', name: 'Robert Brown', purpose: 'Guest', entryTime: '12:00 PM' },
+        { id: '1', name: 'Rahul', purpose: 'Meeting', entryTime: '10:30 AM' },
+        { id: '2', name: 'Zara', purpose: 'Guest', entryTime: '12:00 PM' },
     ]);
 
     // Filter visitors based on search query

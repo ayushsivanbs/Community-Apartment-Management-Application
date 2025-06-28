@@ -11,7 +11,7 @@ const ResidentDashboard = ({ route }) => {
 
     // Sample User Profile
     const userProfile = {
-        name: 'Gopika',
+        name: 'James',
         apartment: 'Apartment 12B',
         profileImage: 'https://www.w3schools.com/howto/img_avatar.png',
     };
@@ -22,8 +22,8 @@ const ResidentDashboard = ({ route }) => {
     ];
 
     const familyMembers = [
-        { id: '1', name: 'Abraham', relation: 'Spouse' },
-        { id: '2', name: 'Kunjunni', relation: 'Son' },
+        { id: '1', name: 'Gopika', relation: 'Spouse' },
+        { id: '2', name: 'Adi', relation: 'Son' },
     ];
 
     const quickActions = [
@@ -37,7 +37,7 @@ const ResidentDashboard = ({ route }) => {
       useEffect(() => {
            const fetchAnnouncements = async () => {
                try {
-                   const response = await fetch(`http://192.168.51.89:5000/announcements?timestamp=${new Date().getTime()}`);
+                   const response = await fetch(`http://localhost:5000/announcements?timestamp=${new Date().getTime()}`);
                    if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
        
                    const data = await response.json();

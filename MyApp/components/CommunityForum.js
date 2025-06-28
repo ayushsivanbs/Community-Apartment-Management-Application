@@ -6,8 +6,8 @@ import { useNavigation } from '@react-navigation/native';
 const CommunityForum = () => {
     const navigation = useNavigation();
     const [posts, setPosts] = useState([
-        { id: '1', author: 'John Doe', content: 'How do I pay my maintenance bill online?', likes: 5, comments: [] },
-        { id: '2', author: 'Alice Smith', content: 'Is there any event happening this weekend?', likes: 3, comments: [] },
+        { id: '1', author: 'Ashwin', content: 'How do I pay my maintenance bill online?', likes: 5, comments: [] },
+        { id: '2', author: 'Jomol', content: 'Is there any event happening this weekend?', likes: 3, comments: [] },
     ]);
     const [newPost, setNewPost] = useState('');
 

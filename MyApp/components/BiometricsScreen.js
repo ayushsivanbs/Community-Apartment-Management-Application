@@ -26,7 +26,7 @@ const BiometricsScreen = ({ navigation }) => {
 
     const sendOtp = async () => {
         try {
-            const response = await axios.post('http://192.168.51.89:5000/send-otp', {
+            const response = await axios.post('http://localhost:5000/send-otp', {
                 email: 'community.apartment.app@gmail.com',
             });
             if (response.data.success) {

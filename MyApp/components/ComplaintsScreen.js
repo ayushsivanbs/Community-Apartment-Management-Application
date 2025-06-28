@@ -6,7 +6,7 @@ import { Picker } from "@react-native-picker/picker";
 import Video from "react-native-video";
 import axios from "axios";
 
-const API_URL = "http://192.168.51.89:5000/maintenance_requests"; // Replace with your API URL
+const API_URL = "http://localhost:5000/maintenance_requests"; // Replace with your API URL
 
 const ComplaintsScreen = () => {
   const [complaints, setComplaints] = useState([]);

@@ -14,12 +14,7 @@ const securityAlerts = [
     description: 'A vehicle has been parked near Gate 3 for an extended period.',
     timestamp: '2025-03-25 12:45 PM',
   },
-  {
-    id: '3',
-    type: 'Fire Alarm Triggered',
-    description: 'Fire alarm was triggered in Block C. Fire department notified.',
-    timestamp: '2025-03-25 2:15 PM',
-  },
+
 ];
 
 // Function to determine alert type color

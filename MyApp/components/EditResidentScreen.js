@@ -9,7 +9,7 @@ const EditResidentScreen = ({ route, navigation }) => {
 
     const handleUpdate = async () => {
         try {
-            const response = await fetch(`http://192.168.51.89:5000/residents/${resident.resident_id}`, {
+            const response = await fetch(`http://localhost:5000/residents/${resident.resident_id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

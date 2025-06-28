@@ -278,7 +278,7 @@ app.get("/maintenance_requests", async (req, res) => {
             }
 
             // Modify the URL for client access
-            mediaItem.media_url = `http://192.168.51.89:5000/uploads/${mediaItem.media_url}`;
+            mediaItem.media_url = `http://localhost:5000/uploads/${mediaItem.media_url}`;
             return mediaItem;
           })
         );

@@ -23,7 +23,7 @@ const [selectedResident, setSelectedResident] = useState(null);
     const fetchProfiles = async () => {
         setLoading(true);
         try {
-            const response = await fetch('http://192.168.51.89:5000/profiles');
+            const response = await fetch('http://localhost:5000/profiles');
             const data = await response.json();
             setProfiles(data);
         } catch (error) {
@@ -35,7 +35,7 @@ const [selectedResident, setSelectedResident] = useState(null);
 
     const fetchResidents = async () => {
         try {
-            const response = await fetch('http://192.168.51.89:5000/residents');
+            const response = await fetch('http://localhost:5000/residents');
             const data = await response.json();
             setResidents(data);
         } catch (error) {
@@ -57,7 +57,7 @@ const [selectedResident, setSelectedResident] = useState(null);
         };
 
         try {
-            const response = await fetch('http://192.168.51.89:5000/residents', {
+            const response = await fetch('http://localhost:5000/residents', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(newResident),
@@ -80,7 +80,7 @@ const [selectedResident, setSelectedResident] = useState(null);
 
     const removeResident = async (userId) => {
         try {
-            const response = await fetch(`http://192.168.51.89:5000/residents/${userId}`, {
+            const response = await fetch(`http://localhost:5000/residents/${userId}`, {
                 method: 'DELETE',
             });
 

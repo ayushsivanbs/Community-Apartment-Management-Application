@@ -62,7 +62,7 @@ const ProfileSetupScreen = ({ route, navigation }) => {
     try {
   
 
-      const response = await fetch('http://192.168.51.89:5000/setup-profile', {
+      const response = await fetch('http://localhost:5000/setup-profile', {
         method: 'POST',
         headers: { 'Content-Type': 'multipart/form-data' }, 
         body: formData,

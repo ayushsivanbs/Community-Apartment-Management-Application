@@ -60,30 +60,7 @@ const ContactManagement = () => {
                     </Card>
                 )}
             />
-
-            {/* Complaint Form */}
-            <Text style={styles.sectionTitle}>Report an Issue</Text>
-            <TextInput
-                style={styles.input}
-                placeholder="Enter issue type (e.g., Water leakage)"
-                value={issue}
-                onChangeText={setIssue}
-            />
-            <TextInput
-                style={[styles.input, styles.textArea]}
-                placeholder="Describe the issue"
-                value={details}
-                onChangeText={setDetails}
-                multiline
-            />
-            <TouchableOpacity style={styles.submitButton} onPress={handleSubmitComplaint}>
-                <Text style={styles.buttonText}>Submit Complaint</Text>
-            </TouchableOpacity>
-
-            {/* Community Chat (Optional) */}
-            <TouchableOpacity style={styles.chatButton} onPress={() => Alert.alert('Feature Coming Soon', 'Community chat will be available soon!')}>
-                <Text style={styles.buttonText}>Join Community Chat</Text>
-            </TouchableOpacity>
+ 
         </View>
     );
 };
